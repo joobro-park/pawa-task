@@ -24,7 +24,7 @@ os: linux
 #   may cause associated deployments to fail.
 files:
   - source: /
-    destination: /home/ubuntu/web
+    destination: /var/www/intern
 # For deployments to Amazon Linux, Ubuntu Server, or RHEL instances,
 #   you can specify a "permissions"
 #   section here that describes special permissions to apply to the files
@@ -101,10 +101,10 @@ hooks:
 #      runas:
 #  # During the ApplicationStart deployment lifecycle event, run the commands
 #  #   in the script specified in "location".
-#  ApplicationStart:
-#    - location:
-#      timeout:
-#      runas:
+  ApplicationStart:
+    - location: Scripts/ApplicationStart.sh
+      timeout: 300
+      runas: root
 #    - location:
 #      timeout:
 #      runas:
