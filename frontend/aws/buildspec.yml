@@ -14,7 +14,7 @@ phases:
   post_build:
     commands:
       - echo copy appspec to dist
-      - cp -r -u ./aws/appspec ./dist
+      - cp -r -u ./aws/codedeploy/ ./dist/
 artifacts:
   files:
     - '**/*'
