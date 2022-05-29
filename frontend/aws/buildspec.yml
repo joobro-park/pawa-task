@@ -13,7 +13,8 @@ phases:
       - yarn build
   post_build:
     commands:
-      - echo nothing to do
+      - echo copy appspec to dist
+      - cp -r -u ./aws/appspec ./dist
 artifacts:
   files:
     - '**/*'
