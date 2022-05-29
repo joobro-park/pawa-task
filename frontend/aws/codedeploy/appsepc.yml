@@ -24,7 +24,7 @@ os: linux
 #   may cause associated deployments to fail.
 files:
   - source: /
-    destination: /web-build
+    destination: /home/ubuntu/web/
 # For deployments to Amazon Linux, Ubuntu Server, or RHEL instances,
 #   you can specify a "permissions"
 #   section here that describes special permissions to apply to the files
@@ -35,12 +35,12 @@ files:
 #   then remove the
 #   "permissions" section altogether. A blank or incomplete "permissions"
 #   section may cause associated deployments to fail.
-#permissions:
-#  - object:
-#    pattern:
+permissions:
+  - object: /
+    pattern: "**"
 #    except:
-#    owner:
-#    group:
+    owner: ubuntu
+    group: ubuntu
 #    mode:
 #    acls:
 #      -
