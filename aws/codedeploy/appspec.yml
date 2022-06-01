@@ -89,7 +89,7 @@ hooks:
   BeforeInstall:
     - location: Scripts/BeforeInstall.sh
       timeout: 300
-#      runas: ubuntu
+      runas: root
 #  # During the AfterInstall deployment lifecycle event, run the commands
 #  #   in the script specified in "location".
 #  AfterInstall:
