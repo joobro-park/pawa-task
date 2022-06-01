@@ -2,8 +2,9 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      java: latest
+    commands:
+      - apt update
+      - apt install openjdk-17-jdk
   build:
     commands:
       - echo Build started on `date`
