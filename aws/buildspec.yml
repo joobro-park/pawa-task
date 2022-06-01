@@ -4,7 +4,7 @@ phases:
   install:
     commands:
       - apt update
-      - apt install openjdk-17-jdk
+      - apt install openjdk-17-jdk -Y
   build:
     commands:
       - echo Build started on `date`
