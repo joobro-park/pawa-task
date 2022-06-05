@@ -14,8 +14,12 @@ if [ -z $JAVA_HOME ]; then
     cd /usr/java
     tar -xzvf openjdk-12.0.2_linux-x64_bin.tar.gz
     rm openjdk-12.0.2_linux-x64_bin.tar.gz
-    export JAVA_HOME=/usr/java/jdk-12.0.2
-    export PATH=$JAVA_HOME/bin:$PATH
+
+    # add path
+    cd /etc
+    chmod 666 profile
+    echo -e "\nJAVA_HOME=/usr/java/jdk-12.0.2\nPATH=$JAVA_HOME/bin:$PATH" >> profile
+    chmod 644 profile
 fi
 
 echo "kill old process"
