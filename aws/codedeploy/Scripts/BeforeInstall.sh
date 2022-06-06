@@ -18,7 +18,7 @@ if [ -z $JAVA_HOME ]; then
     # add path
     cd /etc
     chmod 666 profile
-    echo -e "\nexport JAVA_HOME=/usr/java/jdk-12.0.2\nexport PATH=$JAVA_HOME/bin:$PATH" >> profile
+    echo -e "\nexport JAVA_HOME=/usr/java/jdk-12.0.2\nexport PATH=\$JAVA_HOME/bin:$PATH" >> profile
     chmod 644 profile
 fi
 
