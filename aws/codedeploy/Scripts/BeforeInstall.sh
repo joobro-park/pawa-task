@@ -24,10 +24,10 @@ fi
 
 echo "kill old process"
 if ls /var/app/*.jar 1> /dev/null 2>&1; then
-  JAR_PATH = $(ls /var/app/*.jar | cut -d " " -f1)
-  JAR_NAME = $(basename $JAR_PATH)
-  if [ -n JAR_NAME ]; then
-      CURRENT_PID = $(pgrep -f JAR_NAME)
+  JAR_PATH=$(ls /var/app/*.jar | cut -d " " -f1)
+  JAR_NAME=$(basename $JAR_PATH)
+  if [ -n $JAR_NAME ]; then
+      CURRENT_PID=$(pgrep -f $JAR_NAME)
       if [ -n $CURRENT_PID ]; then
           kill -15 $CURRENT_PID
           sleep 5

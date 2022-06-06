@@ -1,5 +1,6 @@
 #!/bin/bash
 
-export DEPLOY_LOG=/home/ubuntu/deploy.log
-export JAR_NAME=$(ls /var/app/*.jar | cut -d " " -f1)
-nohup java -jar $JAR_NAME >> $DEPLOY_LOG 2>&1 &
+echo "Application Start"
+DEPLOY_LOG=/home/ubuntu/deploy.log
+JAR_PATH=$(ls /var/app/*.jar | cut -d " " -f1)
+nohup java -jar $JAR_PATH >> $DEPLOY_LOG 2>&1 &
