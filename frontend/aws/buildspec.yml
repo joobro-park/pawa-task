@@ -15,6 +15,7 @@ phases:
     commands:
       - echo copy appspec to dist
       - cp -r -T ./aws/codedeploy ./dist
+      - echo webhook test
 artifacts:
   files:
     - '**/*'
